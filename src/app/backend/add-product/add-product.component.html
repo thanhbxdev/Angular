@@ -1,0 +1,109 @@
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0 text-dark">Add Products</h1>
+        </div>
+        <!-- /.col -->
+        <div class="col-sm-6 text-right">
+          <a class="btn btn-primary" href="/admin/products" role="button">List Products</a>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <form>
+        <div class="">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control"
+                 id="name"
+                 name="name"
+                 required
+                 minlength="10"
+                 #name="ngModel"
+                 [(ngModel)]="product.name">
+        </div>
+        <div *ngIf="name.invalid && (name.dirty || name.touched)"
+             class="alert">
+          <div *ngIf="name.errors?.required">
+            <small class="text-red">Name is required.</small>
+          </div>
+          <div *ngIf="name.errors?.minlength">
+            <small class="text-red">Name must be at least 15 characters long.</small>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="cate" class="form-label">Category</label>
+          <input type="number" class="form-control"
+                 id="cate"
+                 required
+                 name="category"
+                 #category="ngModel"
+                 [(ngModel)]="product.category">
+        </div>
+        <div *ngIf="category.invalid && (category.dirty || category.touched)"
+             class="alert">
+          <div *ngIf="category.errors?.required">
+            <small class="text-red">Cate is required.</small>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="price" class="form-label">Price</label>
+          <input type="number" class="form-control"
+                 id="price"
+                 name="price"
+                 required
+                 #price="ngModel"
+                 [(ngModel)]="product.price">
+        </div>
+        <div *ngIf="price.invalid && (price.dirty || price.touched)"
+             class="alert">
+          <div *ngIf="price.errors?.required">
+            <small class="text-red">Price is required.</small>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="quantity" class="form-label">Quantity</label>
+          <input type="number" class="form-control"
+                 id="quantity"
+                 name="quantity"
+                 required
+                 #quantity="ngModel"
+                 [(ngModel)]="product.quantity">
+        </div>
+        <div *ngIf="quantity.invalid && (quantity.dirty || quantity.touched)"
+             class="alert">
+          <div *ngIf="quantity.errors?.required">
+            <small class="text-red">Quantity is required.</small>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <input type="text" class="form-control"
+                 id="description"
+                 name="description"
+                 required
+                 #description="ngModel"
+                 [(ngModel)]="product.desc">
+        </div>
+        <div *ngIf="description.invalid && (description.dirty || description.touched)"
+             class="alert">
+          <div *ngIf="description.errors?.required">
+            <small class="text-red">Description is required.</small>
+          </div>
+        </div>
+        <button class="btn btn-primary" (click)="addProduct()">Add Product</button>
+      </form>
+
+    </div>
+  </section>
+  <!-- /.content -->
+</div>

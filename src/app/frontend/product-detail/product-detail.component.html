@@ -1,0 +1,85 @@
+<!-- Breadcrumbs -->
+<div class="breadcrumbs-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <nav class="woocommerce-breadcrumb">
+          <a routerLink="/">Home</a>
+          <span class="separator">/</span>
+          <a routerLink="/">Shop</a>
+          <span class="separator">/</span>
+          <a routerLink="/">Clothings</a>
+          <span class="separator">/</span> {{product.name}}
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Breadcrumbs End -->
+<!-- Page title -->
+<div class="entry-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="entry-title">{{product.name}}</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Page title end -->
+<!-- Single product area -->
+<div class="single-product-area">
+  <div class="container">
+    <div class="single-product-wrapper">
+      <div class="row">
+        <div class="col-xs-12 col-md-7 col-lg-7">
+          <div class="product-popup">
+            <img src="../../../assets/images/product/{{product.id}}.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-5 col-lg-5">
+          <div class="single-product-info">
+            <h1>{{product.name}}</h1>
+            <div class="product-rattings">
+              <span><i class="fa fa-star"></i></span>
+              <span><i class="fa fa-star"></i></span>
+              <span><i class="fa fa-star"></i></span>
+              <span><i class="fa fa-star-half-o"></i></span>
+              <span><i class="fa fa-star-o"></i></span>
+            </div>
+            <span class="price">
+                                        <del>$ 10000.00</del> $ {{product.price}}
+                                    </span>
+            <p>{{product.desc}}</p>
+            <div class="box-quantity d-flex">
+              <form action="#">
+                <input class="quantity mr-40" min="1" value="1" type="number">
+              </form>
+              <a class="add-cart" href="cart.html">add to cart</a>
+            </div>
+            <div class="wishlist-compear-area">
+              <a href="wishlist.html"><i class="ion-ios-heart-outline"></i> Add to Wishlist</a>
+              <a href="#"><i class="ion-ios-loop-strong"></i> Compare</a>
+            </div>
+            <div class="product_meta">
+              <span class="posted_in">Categories: <a href="#" rel="tag">Accessories</a>, <a href="#" rel="tag">Clothings</a></span>
+            </div>
+            <div class="single-product-sharing">
+              <div class="widget widget_socialsharing_widget">
+                <h3 class="widget-title">Share this product</h3>
+                <ul class="social-icons">
+                  <li><a class="facebook social-icon" href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a class="twitter social-icon" href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a class="pinterest social-icon" href="#"><i class="fa fa-pinterest"></i></a></li>
+                  <li><a class="gplus social-icon" href="#"><i class="fa fa-google-plus"></i></a></li>
+                  <li><a class="linkedin social-icon" href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Single product area end -->

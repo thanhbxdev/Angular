@@ -1,0 +1,123 @@
+<!-- Slider area -->
+<div class="slider-area">
+  <div class="container">
+    <div class="row">
+      <div class="slider-hidden col-lg-3">
+
+      </div>
+      <div class="slider col-xl-9">
+        <img src="../../../assets/images/slider/1.jpg" alt="main slider" title="#htmlcaption1"/>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Slider area end -->
+<!-- Policy area -->
+<div class="policy-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="policy-area-inner">
+          <div class="single-policy-area">
+            <div class="single-policy">
+              <div class="icon"><i class="icon ion-android-sync"></i></div>
+              <h3>Free Return</h3>
+              <p>30 days money back guarantee!</p>
+            </div>
+          </div>
+          <div class="single-policy-area">
+            <div class="single-policy">
+              <div class="icon"><i class="icon ion-paper-airplane"></i></div>
+              <h3>Free Shipping</h3>
+              <p>Free shipping on all order</p>
+            </div>
+          </div>
+          <div class="single-policy-area">
+            <div class="single-policy">
+              <div class="icon"><i class="icon ion-help-buoy"></i></div>
+              <h3>Support 24/7</h3>
+              <p>We support online 24 hrs a day</p>
+            </div>
+          </div>
+          <div class="single-policy-area">
+            <div class="single-policy">
+              <div class="icon"><i class="icon ion-card"></i></div>
+              <h3>Receive Gift Card</h3>
+              <p>Recieve gift all over oder $50</p>
+            </div>
+          </div>
+          <div class="single-policy-area">
+            <div class="single-policy">
+              <div class="icon"><i class="icon ion-ios-locked"></i></div>
+              <h3>Secure Payment</h3>
+              <p>We Value Your Security</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Policy area end -->
+<!-- Best sellers -->
+<div class="product-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="section-title">
+          <h3>New Arrivals</h3>
+        </div>
+      </div>
+    </div>
+    <div class="product-area-inner">
+      <div class="row">
+        <div class="col-sm-3 mb-5" *ngFor="let product of products;index as i">
+          <!-- single product -->
+          <div class="single-product-area">
+            <div class="product-wrapper gridview">
+              <div class="list-col4">
+                <div class="product-image">
+                  <a href="#">
+                    <img src="../../../assets/images/product/{{i+1}}.jpg" alt="">
+                  </a>
+                  <div class="quickviewbtn">
+                    <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View"><i
+                      class="ion-eye"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="list-col8">
+                <div class="product-info">
+                  <h2><a routerLink="/product/{{product.id}}">{{product.name}}</a></h2>
+                  <span class="price">
+                                                        $ {{product.price}}
+                                                    </span>
+                </div>
+                <div class="product-hidden">
+                  <div class="add-to-cart">
+                    <a href="cart.html">Add to cart</a>
+                  </div>
+                  <div class="star-actions">
+                    <div class="product-rattings">
+                      <span><i class="fa fa-star"></i></span>
+                      <span><i class="fa fa-star"></i></span>
+                      <span><i class="fa fa-star"></i></span>
+                      <span><i class="fa fa-star-half-o"></i></span>
+                      <span><i class="fa fa-star-o"></i></span>
+                    </div>
+                    <ul class="actions">
+                      <li><a href="#"><i class="ion-android-favorite-outline"></i></a></li>
+                      <li><a href="#"><i class="ion-ios-shuffle-strong"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- single product end -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Best sellers end -->
